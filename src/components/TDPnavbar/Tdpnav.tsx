@@ -12,7 +12,7 @@ export function Tdpnav() {
         Overview
         </Button>
         <Button className={classes.tdpnavbtn} variant="outline" size="xs">
-        Prizes
+        <a href="/Tournament/Prizes" className={classes.a}>Prizes</a>
         </Button>
         <Button className={classes.tdpnavbtn} variant="outline" size="xs">
         Schedule

@@ -27,7 +27,7 @@ import {
             <MantineLogo size={30} />
   
             <Group h="100%" gap={0} visibleFrom="sm">
-              <a href="#" className={classes.link}>
+              <a href="/Tournament" className={classes.link}>
               Tournaments
               </a>
               <a href="#" className={classes.link}>
@@ -42,10 +42,13 @@ import {
             </Group>
   
             <Group visibleFrom="sm">
+            <a href="" className={classes.linkbtn}>
+                Theme
+              </a>
               <a href="#" className={classes.linkbtn}>
                  Host an Event
               </a>
-              <Button color='#F1A02F'>Sign up</Button>
+              <Button color='#F1A02F'><a href="/SignUp">Sign up</a></Button>
             </Group>
   
             <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />

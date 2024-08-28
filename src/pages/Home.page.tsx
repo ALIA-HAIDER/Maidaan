@@ -1,5 +1,6 @@
 // import { Welcome } from '../components/Welcome/Welcome';
 // import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeToggle';
 import { FooterLinks } from '@/components/LpFooter/FooterLinks';
 import { HeroImageBackground } from '@/components/LpHeader/HeroImageBackground';
 import { HeroText } from '@/components/LpHeadertwo/HeroText';
@@ -18,6 +19,7 @@ import TestimonialSlider from '@/components/TestimonialSlider/TestimonialSlider'
 export function HomePage() {
   return (
     <>
+    {/* <ColorSchemeToggle/> */}
       {/* <Welcome />
       <ColorSchemeToggle /> */}
       <HeaderMegaMenu/>

@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HomePage } from './pages/Home.page';
 import { TournamentDetailPage } from './pages/TournamentDetailPage';
-import {TournamentpagePrize} from './pages/TouranmentpagePrize';
 import TournamentPage from './pages/TournamentPage'
 import SignUpPage from './pages/SignUpPage';
 const router = createBrowserRouter([
@@ -22,10 +21,7 @@ const router = createBrowserRouter([
     element: <TournamentDetailPage />,
   },
 
-  {
-    path: '/Tournament/Prizes',
-    element: <TournamentpagePrize/>  ,
-  }
+
 ]);
 
 

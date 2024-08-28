@@ -11,7 +11,6 @@ import { TournamentBanner } from '@/components/LpProfileBanner/TournamentBanner'
 import { UnitrorPlay } from '@/components/LpProfileBanner/UniteorPlay';
 import { Arena } from '@/components/LpStepintoArena/Arena';
 import { VoiceFromFiled } from '@/components/LpText/Voice';
-import { HeaderMegaMenu } from '@/components/MaidaanLogo/HeaderMegaMenu';
 import TestimonialSlider from '@/components/TestimonialSlider/TestimonialSlider';
 
 
@@ -22,7 +21,6 @@ export function HomePage() {
     {/* <ColorSchemeToggle/> */}
       {/* <Welcome />
       <ColorSchemeToggle /> */}
-      <HeaderMegaMenu/>
       <HeroImageBackground/>
       <HeroText/>
       <EmailBanner/>
@@ -33,7 +31,6 @@ export function HomePage() {
       <VoiceFromFiled/>
       {/* <TestimonialSlider/> */}
       <Arena/>
-      <FooterLinks/>
     </>
   );
 }

@@ -4,6 +4,7 @@ import { TournamentDetailPage } from './pages/TournamentDetailPage';
 import TournamentPage from './pages/TournamentPage'
 import SignUpPage from './pages/SignUpPage';
 import GovtSchemes from './pages/GovtSchemes';
+
 const router = createBrowserRouter([
   {
     path: '/',

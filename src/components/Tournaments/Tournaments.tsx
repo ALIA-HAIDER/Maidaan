@@ -5,14 +5,15 @@ import classes from './Tournaments.module.css';
 import Tcard from './Tcard';
 import { NavLink } from 'react-router-dom';
 
+
 const Tournaments: React.FC = () => {
    
   return (
     <Container size="lg" className={classes.container}>
       <Text className={classes.heading}>Ongoing</Text>
       <Grid>
-      <Grid.Col span={6}>
-      <NavLink to={"/Tournament/Details"}><Tcard/></NavLink>
+      <Grid.Col span={6} >
+      <NavLink to={"/Tournament/Details"}className={classes.Link}><Tcard/></NavLink>
       </Grid.Col>
       <Grid.Col span={6}>
         <Tcard/>

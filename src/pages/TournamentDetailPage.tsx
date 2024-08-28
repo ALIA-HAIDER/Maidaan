@@ -1,5 +1,4 @@
 import { FooterLinks } from '@/components/LpFooter/FooterLinks';
-import { HeaderMegaMenu } from '@/components/MaidaanLogo/HeaderMegaMenu';
 import CompetitionDetails from '@/components/TdpCompetitionDetails/CompetitionDetails';
 import EventCard from '@/components/TdpEventCard/EventCard';
 import { Tdpnav } from '@/components/TDPnavbar/Tdpnav';
@@ -16,7 +15,7 @@ export function TournamentDetailPage() {
 
   return (
     <>
-      <HeaderMegaMenu />
+      
       <Tdpnav setSubPage={setSubPage} />
 
       {subPage === 'home' && (
@@ -29,8 +28,6 @@ export function TournamentDetailPage() {
       {subPage === 'prizes' && <ChampionsTrophy />}
 
       {subPage === 'Schedule' && <ChampionsSchedule />}
-
-      <FooterLinks />
     </>
   );
 }

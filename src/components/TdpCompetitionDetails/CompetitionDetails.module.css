@@ -20,13 +20,13 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
-    padding-left: 20%;
+    padding-left: 25%;
   }
   
   .detailsSection {
     flex: 1;
     min-width: 150px; /* Allows items to wrap on smaller screens */
-    padding-right: 27%;
+    padding-right: 30%;
   }
   
   .label {

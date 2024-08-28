@@ -18,7 +18,7 @@ export function HeroImageBackground() {
 
         <div className={classes.controls}>
           <Button className={classes.control} variant="white" size="lg">
-            Explore Tournaments
+            <a href="/Tournament" className={classes.a}>Explore Tournaments</a>
           </Button>
           <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
           Find a Sports Event

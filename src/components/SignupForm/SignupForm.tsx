@@ -1,18 +1,8 @@
 import React from 'react';
-import {
-  TextInput,
-  PasswordInput,
-  Paper,
-  Title,
-  Text,
-  Container,
-  Button,
-  Divider,
-  Group,
-} from '@mantine/core';
+import {TextInput,PasswordInput,Paper,Title,Text,Container,Button,Divider,Group,} from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { GoogleIcon } from './GoogleIcon';
-
+import classes from './SignupForm.module.css'
 export const SignupForm: React.FC = () => {
   const form = useForm({
     initialValues: {
@@ -31,7 +21,7 @@ export const SignupForm: React.FC = () => {
   });
 
   return (
-    <Container size={420} my={40}>
+    <Container size={420} my={40} className={classes.container}>
       <Title
         style={{
           fontFamily: 'Inter, sans-serif',
@@ -45,9 +35,9 @@ export const SignupForm: React.FC = () => {
         Join our community to compete, organize, and experience the thrill of sports.
       </Text>
 
-      <Paper withBorder shadow="md" p={30} mt={30} radius="md">
+      <Paper withBorder shadow="md" p={30} mt={30} radius="md" className={classes.Paper}>
         <form onSubmit={form.onSubmit((values) => console.log(values))}>
-          <TextInput
+          <TextInput 
             label="Email"
             placeholder="Enter your email address"
             {...form.getInputProps('email')}
@@ -62,15 +52,15 @@ export const SignupForm: React.FC = () => {
             required
           />
 
-          <PasswordInput
+          <PasswordInput 
             label="Confirm Password"
             placeholder="Confirm your password"
             mt="md"
-            {...form.getInputProps('confirmPassword')}
+            {...form.getInputProps('confirmPassword') }
             required
           />
 
-          <Button fullWidth mt="xl" type="submit">
+          <Button fullWidth mt="xl" type="submit" style={{backgroundColor:'#F1A02F'}}>
             Sign up
           </Button>
         </form>
@@ -86,8 +76,8 @@ export const SignupForm: React.FC = () => {
           </Button>
         </Group>
 
-        <Text ta="center" mt="md">
-          Already have an Account? <a href="#">Log in</a>
+        <Text ta="center" mt="md" className={classes.HaveanAccount}>
+          Already have an Account? <a href="#" style={{textDecoration:'none', color:'black'}}>Log in</a>
         </Text>
       </Paper>
     </Container>

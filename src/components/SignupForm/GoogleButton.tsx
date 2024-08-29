@@ -11,6 +11,5 @@ export const GoogleButton: React.FC<ButtonProps> = (props) => (
     fullWidth
     {...props}
   >
-    Sign up with Google
   </Button>
 );

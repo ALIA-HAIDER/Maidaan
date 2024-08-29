@@ -3,7 +3,10 @@ import {TextInput,PasswordInput,Paper,Title,Text,Container,Button,Divider,Group,
 import { useForm } from '@mantine/form';
 import { GoogleIcon } from './GoogleIcon';
 import classes from './SignupForm.module.css'
-export const SignupForm: React.FC = () => {
+export interface SignupFormProps {
+  setpage: (page: 'Signup' | 'Login' ) => void;
+}
+export function SignupForm({setpage}:SignupFormProps) {
   const form = useForm({
     initialValues: {
       email: '',
@@ -77,7 +80,7 @@ export const SignupForm: React.FC = () => {
         </Group>
 
         <Text ta="center" mt="md" className={classes.HaveanAccount}>
-          Already have an Account? <a href="#" style={{textDecoration:'none', color:'black'}}>Log in</a>
+          Already have an Account? <a href="#" style={{textDecoration:'none', color:'black'}} onClick={() => setpage('Login')}>Log in</a>
         </Text>
       </Paper>
     </Container>

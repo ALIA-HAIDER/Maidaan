@@ -12,28 +12,28 @@ const Tournaments: React.FC = () => {
     <Container size="lg" className={classes.container}>
       <Text className={classes.heading}>Ongoing</Text>
       <Grid>
-      <Grid.Col span={6} >
+      <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
       <NavLink to={"/Tournament/Details"}className={classes.Link}><Tcard/></NavLink>
       </Grid.Col>
-      <Grid.Col span={6}>
+      <Grid.Col span={{ base: 12, md: 12, lg: 6 }} >
         <Tcard/>
       </Grid.Col>   
       </Grid>
 
       <Grid>
-      <Grid.Col span={6}>
+      <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
       <Tcard/>
       </Grid.Col>
-      <Grid.Col span={6}>
+      <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
         <Tcard/>
       </Grid.Col>
       </Grid>
 
       <Grid>
-      <Grid.Col span={6}>
+      <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
       <Tcard/>
       </Grid.Col>
-      <Grid.Col span={6}>
+      <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
         <Tcard/>
       </Grid.Col>
       </Grid>

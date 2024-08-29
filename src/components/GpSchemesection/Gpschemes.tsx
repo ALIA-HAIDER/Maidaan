@@ -64,7 +64,7 @@ export function GpSchemes() {
   ));
 
   return (
-    <Container py="xl">
+    <Container py="xl" id='target-section'>
       <SimpleGrid cols={{ base: 1, sm: 3 }}>{cards}</SimpleGrid>
     </Container>
   );

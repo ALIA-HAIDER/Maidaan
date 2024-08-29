@@ -20,7 +20,7 @@ export function GpHeader() {
 
         <div className={classes.controls}>
           <Button className={classes.control} variant="white" size="lg">
-            <a href="/Tournament" className={classes.a}>Explore Scheme</a>
+            <a href="#target-section" className={classes.a}>Explore Scheme</a>
           </Button>
           {/* <Button className={cx(classes.control, classes.secondaryControl)} size="lg">
           Explore Scheme

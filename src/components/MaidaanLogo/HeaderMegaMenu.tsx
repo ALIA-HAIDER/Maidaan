@@ -45,7 +45,7 @@ import {
             {/* <a href="" className={classes.linkbtn}>
                 Theme
               </a> */}
-              <a href="#" className={classes.linkbtn}>
+              <a href="/HostingPage" className={classes.linkbtn}>
                  Host an Event
               </a>
               <Button color='#F1A02F'className={classes.Signbtn}><a href="/SignUp" className={classes.Signbtn}>Sign up</a></Button>
@@ -83,7 +83,7 @@ import {
             <Divider my="sm" />
   
             <Group justify="center" grow pb="xl" px="md">
-                 <a href="#" className={classes.linkbtn}>
+                 <a href="/HostingPage" className={classes.linkbtn}>
                  Host an Event
               </a>
               <Button color='#F1A02F' className={classes.Signbtn} ><a href="/SignUp" className={classes.Signbtn}>Sign up</a></Button>

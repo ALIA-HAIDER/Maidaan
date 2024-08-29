@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #e0f7fa;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .burger {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .links {
+      display: none;
+    }
+    .burger {
+      display: block;
+    }
+  }
+  

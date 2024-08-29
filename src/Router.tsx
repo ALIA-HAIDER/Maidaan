@@ -4,6 +4,7 @@ import { TournamentDetailPage } from './pages/TournamentDetailPage';
 import TournamentPage from './pages/TournamentPage'
 import SignUpPage from './pages/SignUpPage';
 import GovtSchemes from './pages/GovtSchemes';
+import HostingPage from './pages/HostingPage';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     path: '/GvtSch',
     element: <GovtSchemes/>,
   },
+  {
+    path: '/HostingPage',
+    element: <HostingPage/>,
+  }
 
 
 ]);

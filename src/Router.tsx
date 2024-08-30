@@ -5,6 +5,7 @@ import TournamentPage from './pages/TournamentPage'
 import SignUpPage from './pages/SignUpPage';
 import GovtSchemes from './pages/GovtSchemes';
 import HostingPage from './pages/HostingPage';
+import Academi from './pages/Academies';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/HostingPage',
     element: <HostingPage/>,
+  },
+  {
+    path: '/Aca',
+    element: <Academi/>,
   }
 
 

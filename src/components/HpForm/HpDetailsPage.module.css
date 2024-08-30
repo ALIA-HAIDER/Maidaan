@@ -3,11 +3,16 @@
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
   }
   
   @media (max-width: 768px) {
     .formContainer {
       padding: 1rem;
+      width: auto;
     }
+  }
+  .submittedText {
+    text-align: center; /* or left, right as needed */
   }
   

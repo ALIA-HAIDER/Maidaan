@@ -33,7 +33,7 @@ import {
               <a href="#" className={classes.link}>
               Events
               </a>
-              <a href="#" className={classes.link}>
+              <a href="/Aca" className={classes.link}>
               Academies
               </a>
               <a href="/GvtSch" className={classes.link}>
@@ -73,7 +73,7 @@ import {
               <a href="#" className={classes.link}>
               Events
               </a>
-              <a href="#" className={classes.link}>
+              <a href="/Aca" className={classes.link}>
               Academies
               </a>
               <a href="/GvtSch" className={classes.link}>

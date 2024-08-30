@@ -27,10 +27,10 @@ export function StatsCard() {
         {article.title}
       </Text>
       <Group  mt="xs">
-        <Text size="sm" color="dimmed">
+        <Text size="sm" >
           Progress
         </Text>
-        <Text size="sm" color="dimmed">
+        <Text size="sm" >
           {article.progress}%
         </Text>
       </Group>

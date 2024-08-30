@@ -12,9 +12,12 @@ import {
   import { MantineLogo } from '@mantinex/mantine-logo';
   import { useDisclosure } from '@mantine/hooks';
   import classes from './HeaderMegaMenu.module.css';
+  interface NavProps {
+    NavLinks:string;
+   SetNavLinks: React.Dispatch<React.SetStateAction<string>>
+  }
   
-  
-  export function HeaderMegaMenu() {
+  export function HeaderMegaMenu({NavLinks,SetNavLinks}:NavProps) {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
     const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
     const theme = useMantineTheme();
@@ -27,17 +30,17 @@ import {
             <MantineLogo size={30} />
   
             <Group h="100%" gap={0} visibleFrom="sm">
-              <a href="/Tournament" className={classes.link}>
-              Tournaments
+              <a  onClick={()=>SetNavLinks('Tournaments')} className={`${classes.link} `} >
+              <p className={` ${NavLinks==='Tournaments'?classes.active:classes.inactive}`}>Tournaments</p>
               </a>
-              <a href="#" className={classes.link}>
-              Events
+              <a onClick={()=>SetNavLinks('Events')} className={classes.link}>
+              <p className={` ${NavLinks==='Events'?classes.active:classes.inactive}`}>Events</p>
               </a>
-              <a href="/Aca" className={classes.link}>
-              Academies
+              <a onClick={()=>SetNavLinks('Academies')} className={classes.link}>
+              <p className={` ${NavLinks==='Academies'?classes.active:classes.inactive}`}>Academies</p>
               </a>
-              <a href="/GvtSch" className={classes.link}>
-              Government Schemes
+              <a onClick={()=>SetNavLinks('GovernmentSchemes')} className={classes.link}>
+              <p className={` ${NavLinks==='GovernmentSchemes'?classes.active:classes.inactive}`}>Government Schemes</p>
               </a> 
             </Group>
   

@@ -1,20 +1,14 @@
 import {
-    Group,
-    Button,
-    Divider,
-    Box,
-    Burger,
-    Drawer,
-    ScrollArea,
-    rem,
-    useMantineTheme,
-  } from '@mantine/core';
+    Group,Button,Divider,Box,Burger,Drawer,ScrollArea,rem,useMantineTheme,} from '@mantine/core';
   import { MantineLogo } from '@mantinex/mantine-logo';
   import { useDisclosure } from '@mantine/hooks';
   import classes from './HpNav.module.css';
+  interface NavProps {
+    page:string;
+   setPage: React.Dispatch<React.SetStateAction<string>>
+  }
   
-  
-  export function HpNav() {
+  export function HpNav({page,setPage}:NavProps) {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
     const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
     const theme = useMantineTheme();

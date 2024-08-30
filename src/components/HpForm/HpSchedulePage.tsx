@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextInput, Container, Grid, Button } from '@mantine/core';
+import { TextInput, Container, Grid, Button,Group } from '@mantine/core';
 import styles from './HpDetailsPage.module.css';
 
 interface ScheduleData {
@@ -9,8 +9,11 @@ interface ScheduleData {
   endDate: string;
   endTime: string;
 }
-
-const HpSchdulePage: React.FC = () => {
+interface NavProps {
+  page:string;
+ setPage: React.Dispatch<React.SetStateAction<string>>
+}
+function HpSchdulePage({page,setPage}:NavProps) {
   const [schedules, setSchedules] = useState<ScheduleData[]>([
     { scheduleName: '', startDate: '', startTime: '', endDate: '', endTime: '' },
   ]);
@@ -99,6 +102,7 @@ const HpSchdulePage: React.FC = () => {
                 Delete Schedule
               </Button>
             </Grid.Col>
+            
           </Grid>
         </div>
       ))}
@@ -112,6 +116,10 @@ const HpSchdulePage: React.FC = () => {
       >
         Add Schedule
       </Button>
+      <Group  >
+        <Button>Back to Home page</Button>
+        <Button onClick={()=>setPage('SubmitPage')}>Next</Button>
+        </Group> 
     </Container>
   );
 };

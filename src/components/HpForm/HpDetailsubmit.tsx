@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { Button, Container, Select, Text } from '@mantine/core';
 import classes from './HpDetailsPage.module.css';
-
-export function HpDetailsubmit() {
+interface NavProps {
+  page:string;
+ setPage: React.Dispatch<React.SetStateAction<string>>
+}
+export function HpDetailsubmit({page,setPage}:NavProps) {
   const [submitted, setSubmitted] = useState(false);
   const [status, setStatus] = useState<string>('');
 

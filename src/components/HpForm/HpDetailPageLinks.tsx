@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { TextInput, FileInput, Container, Grid, Image } from '@mantine/core';
+import { TextInput, FileInput, Container, Grid, Image,Button,Group } from '@mantine/core';
 import { IconUpload } from '@tabler/icons-react';
 import styles from './HpDetailsPage.module.css';
-
-const HpDetailsPageLinks: React.FC = () => {
+interface NavProps {
+  page:string;
+ setPage: React.Dispatch<React.SetStateAction<string>>
+}
+function HpDetailsPageLinks({page,setPage}:NavProps) {
   const [image, setImage] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
 
@@ -44,6 +47,10 @@ const HpDetailsPageLinks: React.FC = () => {
             <Image src={preview} alt="Uploaded Image" mt="md" radius="md" withPlaceholder />
           )}
         </Grid.Col>
+        <Group  >
+        <Button>Back to Home page</Button>
+        <Button onClick={()=>setPage('PrizesPage')}>Next</Button>
+        </Group> 
       </Grid>
     </Container>
   );

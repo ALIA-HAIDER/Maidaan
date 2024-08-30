@@ -4,7 +4,7 @@ import styles from './HpDetailsPage.module.css';
 
 const HpDetailsPage: React.FC = () => {
   return (
-    <Container className={styles.formContainer}>
+    <Container mt={30} className={styles.formContainer}>
       <Grid>
         <Grid.Col span={12} >
           <TextInput label="Tournament Name" placeholder="Enter tournament Name" required />

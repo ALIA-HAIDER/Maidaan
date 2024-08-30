@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Button,  Group, Text, Box } from '@mantine/core';
 import styles from './LoginPage.module.css';
-import { OrganizerLogin } from './Organizerlogin';
+import { OrganizerLogin } from './OrganizerLogin'
 import { UserLogin } from './UserLogin';
 interface LoginFormProps {
     setpage: (page: 'Signup' | 'Login' ) => void;

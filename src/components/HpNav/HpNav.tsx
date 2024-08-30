@@ -21,7 +21,7 @@ import {
 
   
     return (
-      <Box pb={0}>
+      <Box pb={0} className={classes.Nav}>
         <header className={classes.header}>
           <Group justify="space-between" h="100%">
             <MantineLogo size={30} />

@@ -1,17 +1,18 @@
 import { HpBanner } from '@/components/HpBanner/HpBanner';
 import HpDetailsPage from '@/components/HpForm/HpDetailsPage';
+import HpFormPrizePage from '@/components/HpForm/HpFormPrizePage';
 import HpFormNavbar from '@/components/HpFormNavbar/HpFormNavbar';
 import { HpNav } from '@/components/HpNav/HpNav';
 import { StatsCard } from '@/components/HpStatsCard/StatsCard';
-import React from 'react';
-
-
+// import classes from './HostingPage.module.css'
 const HostingPage: React.FC = () => {
+  
   return (
     <>
-    <HpNav/>
+    {/* <HpNav/> */}
     <HpFormNavbar/>
-    <HpDetailsPage/>
+    <HpFormPrizePage/>
+    {/* <HpDetailsPage/> */}
     {/* <HpBanner/>
     <StatsCard/> */}
     </>

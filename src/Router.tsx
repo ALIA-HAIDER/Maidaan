@@ -16,28 +16,16 @@ const router = createBrowserRouter([
     path: '/SignUp',
     element: <SignUpPage/>,
   },
-  {
-    path: '/Tournament',
-    element: <TournamentPage />,
-  },
+ 
   {
     path: '/Tournament/Details',
     element: <TournamentDetailPage />,
   },
-  {
-    path: '/GvtSch',
-    element: <GovtSchemes/>,
-  },
+  
   {
     path: '/HostingPage',
     element: <HostingPage/>,
-  },
-  {
-    path: '/Aca',
-    element: <Academi/>,
   }
-
-
 ]);
 
 

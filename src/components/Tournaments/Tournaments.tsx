@@ -1,44 +1,24 @@
 import React from 'react';
-import { Container, Grid, Card, Text, Button, Badge } from '@mantine/core';
+import { Container, Grid, Card, Text, Button, Badge,SimpleGrid } from '@mantine/core';
 // import { IconLocation, IconCalendar } from 'iconsax-react';
 import classes from './Tournaments.module.css';
 import Tcard from './Tcard';
 import { NavLink } from 'react-router-dom';
+import NextUpTcard from './NextUpTcard';
+ 
 
 
-const Tournaments: React.FC = () => {
+function Tournaments() {
    
   return (
-    <Container size="lg" className={classes.container}>
-      <Text className={classes.heading}>Ongoing</Text>
-      <Grid>
-      <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
-      <NavLink to={"/Tournament/Details"}className={classes.Link}><Tcard/></NavLink>
-      </Grid.Col>
-      <Grid.Col span={{ base: 12, md: 12, lg: 6 }} >
+    <Container size="lg" px={100} className={classes.container}>
+      <Text className={classes.heading} >Ongoing</Text>
         <Tcard/>
-      </Grid.Col>   
-      </Grid>
 
-      <Grid>
-      <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
-      <Tcard/>
-      </Grid.Col>
-      <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
-        <Tcard/>
-      </Grid.Col>
-      </Grid>
-
-      <Grid>
-      <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
-      <Tcard/>
-      </Grid.Col>
-      <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
-        <Tcard/>
-      </Grid.Col>
-      </Grid>
-
+    <Text className={classes.heading}  mt={20}>Next Up</Text>
+    <NextUpTcard/>
     </Container>
+
   );
 };
 

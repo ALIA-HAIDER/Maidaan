@@ -1,26 +1,18 @@
-import { Card, Group, Button, Text,Badge,SimpleGrid,Divider} from '@mantine/core';
+import { Card, Group, Button, Text,Badge,SimpleGrid, Divider} from '@mantine/core';
 import classes from './Tournaments.module.css'
 
-function Tcard(){
+function NextUpTcard(){
     const tournaments= [
         {
           title: "Champions Trophy 2024",
           sport: "Cricket",
           location: "Mumbai",
           teamsParticipating: "+1500 Teams Participating",
-          status: "Ongoing",
+          status: "Next Up",
           fee: "Fees Free",
           startDate: "Sept 21, 2024",
         },
-        {
-          title: "Champions Trophy 2024",
-          sport: "Cricket",
-          location: "Mumbai",
-          teamsParticipating: "+1500 Teams Participating",
-          status: "Ongoing",
-          fee: "Fees Free",
-          startDate: "Sept 21, 2024",
-        }
+        
         // Add more tournament objects here if needed
       ];
 
@@ -51,4 +43,4 @@ function Tcard(){
   )
 };
 
-export default Tcard;
+export default NextUpTcard;

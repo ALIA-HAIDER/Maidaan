@@ -4,11 +4,19 @@ import { Router } from './Router'
 import { theme } from './theme';
 import { HeaderMegaMenu } from './components/MaidaanLogo/HeaderMegaMenu';
 import { FooterLinks } from './components/LpFooter/FooterLinks';
+import { useState } from 'react';
+import Tournaments from './components/Tournaments/Tournaments';
+import GovtSchemes from './pages/GovtSchemes';
+import Academies from './pages/Academies';
 export default function App() {
+  // type NL = 'Tournaments' | 'Events' | 'Academies' | 'GovtSheme'| 'Home';
+  const [NavLinks,SetNavLinks]=useState<string>('')
+  // const [Page,SetPage] =useState<string>('')
   return (
     <MantineProvider theme={theme}>
-    <HeaderMegaMenu/>
-      <Router />
+    <HeaderMegaMenu SetNavLinks={SetNavLinks} NavLinks={NavLinks} />
+     {NavLinks==='Tournaments'?<Tournaments/>:NavLinks==='GovernmentSchemes'?<GovtSchemes/>:NavLinks==='Academies'?<Academies/>:<Router/>
+}
       <FooterLinks/>
     </MantineProvider>
 

@@ -6,7 +6,7 @@ import HpSchdulePage from '@/components/HpForm/HpSchedulePage';
 import HpFormNavbar from '@/components/HpFormNavbar/HpFormNavbar';
 import { HpNav } from '@/components/HpNav/HpNav';
 import { StatsCard } from '@/components/HpStatsCard/StatsCard';
-@@ -10,10 +13,13 @@ const HostingPage: React.FC = () => {
+  const HostingPage: React.FC = () => {
   return (
     <>
     <HpNav/>
@@ -22,3 +22,5 @@ import { StatsCard } from '@/components/HpStatsCard/StatsCard';
     </>
   );
 };
+
+export default HostingPage

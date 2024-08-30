@@ -12,10 +12,13 @@ import { UnitrorPlay } from '@/components/LpProfileBanner/UniteorPlay';
 import { Arena } from '@/components/LpStepintoArena/Arena';
 import { VoiceFromFiled } from '@/components/LpText/Voice';
 import TestimonialSlider from '@/components/TestimonialSlider/TestimonialSlider';
-
+import { PagerContext } from '@/Context';
+import { useContext } from 'react';
 
 
 export function HomePage() {
+
+// const [Page,setPage]=useContext(PagerContext)  Error in useContext
   return (
     <>
     {/* <ColorSchemeToggle/> */}

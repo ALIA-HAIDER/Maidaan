@@ -1,24 +1,33 @@
-// CounterContext.tsx
-import React, { createContext, useState } from 'react';
+import { createContext,useState,Dispatch,SetStateAction, } from "react";
+import { ReactNode } from "react";
 
-// Define the shape of the context data
-interface ContextType {
-  count: boolean;
-  setCount: React.Dispatch<React.SetStateAction<boolean>>;
+
+export interface PageContextInterface{
+Page:[{
+  name:string
+}]
+setPage:Dispatch<SetStateAction<string>>
 }
 
-// Create the context with a default value of undefined
-const Context = createContext<ContextType | undefined>(undefined);
+const defaultState={
+ Page:[{
+name:''
+ }],
+  setPage:(page:string)=>{}
+} as PageContextInterface
 
-export const ContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Create state that will be shared
-  const [count, setCount] = useState<boolean>(true);
+export const PagerContext =createContext(defaultState)
 
-  return (
-    <Context.Provider value={{ count, setCount }}>
-      {children}
-    </Context.Provider>
-  );
-};
+type PagerProviderProps={
+  children:ReactNode
+}
 
-export default Context;
+export default function PageProvider({children}:PagerProviderProps){
+const [Page,setPage]=useState<string>('')
+
+return(
+  <PagerContext.Provider value={{Page,setPage}}>
+{children}
+  </PagerContext.Provider>
+)
+}

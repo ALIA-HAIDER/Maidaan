@@ -13,7 +13,7 @@ function Tournaments() {
   return (
     <Container size="lg" px={100} className={classes.container}>
       <Text className={classes.heading} >Ongoing</Text>
-        <Tcard/>
+       <a href="/Tournament/Details" style={{textDecoration:'none'}}><Tcard/></a>
 
     <Text className={classes.heading}  mt={20}>Next Up</Text>
     <NextUpTcard/>

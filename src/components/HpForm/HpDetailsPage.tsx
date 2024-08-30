@@ -1,8 +1,11 @@
 import React from 'react';
-import { TextInput, Textarea, Container, Grid } from '@mantine/core';
+import { TextInput, Textarea, Container, Grid,Button,Group} from '@mantine/core';
 import styles from './HpDetailsPage.module.css';
-
-const HpDetailsPage: React.FC = () => {
+interface NavProps {
+  page:string;
+ setPage: React.Dispatch<React.SetStateAction<string>>
+}
+function HpDetailsPage({page,setPage}:NavProps) {
   return (
     <Container mt={30} className={styles.formContainer}>
       <Grid>
@@ -24,7 +27,11 @@ const HpDetailsPage: React.FC = () => {
         <Grid.Col span={12}>
           <Textarea label="Tournament Details" placeholder="Provide details of the tournament" required />
         </Grid.Col>
-      </Grid>
+      <Group  >
+        <Button>Back to Home page</Button>
+        <Button onClick={()=>setPage('LinksPage')}>Next</Button>
+        </Group>    
+       </Grid>
     </Container>
   );
 };

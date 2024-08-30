@@ -1,8 +1,11 @@
 import React from 'react';
-import { TextInput, Textarea, Container, Grid,Button } from '@mantine/core';
+import { TextInput, Textarea, Container, Grid,Button,Group} from '@mantine/core';
 import styles from './HpDetailsPage.module.css';
-
-const HpFormPrizePage: React.FC = () => {
+interface NavProps {
+  page:string;
+ setPage: React.Dispatch<React.SetStateAction<string>>
+}
+function HpFormPrizePage({page,setPage}:NavProps){
   return (
     <Container mt={30} className={styles.formContainer}>
       <Grid>
@@ -23,6 +26,10 @@ const HpFormPrizePage: React.FC = () => {
         <Button variant='outline' color='red'>Delete Prize</Button>
         </Grid.Col>
       </Grid>
+      <Group  >
+        <Button>Back to Home page</Button>
+        <Button onClick={()=>setPage('SchedulePage')}>Next</Button>
+        </Group> 
     </Container>
   );
 };

@@ -39,12 +39,12 @@ function HpDetailsPageLinks({page,setPage}:NavProps) {
           <FileInput
             label="Upload Poster Image*"
             placeholder="Upload the event poster image"
-            icon={<IconUpload size={14} />}
+            // icon={<IconUpload size={14} />}
             accept="image/*"
             onChange={(file) => handleImageChange(file as File)}
           />
           {preview && (
-            <Image src={preview} alt="Uploaded Image" mt="md" radius="md" withPlaceholder />
+            <Image src={preview} alt="Uploaded Image" mt="md" radius="md"  />
           )}
         </Grid.Col>
        

@@ -16,19 +16,20 @@ export function Arena() {
         <Group className={classes.controls}>
         <h1 >Join the Action –</h1>
 
-          <Button
+          <a href="Signup"><Button
             size="xl"
             className={classes.control}
             variant="gradient"
             gradient={{ from: 'blue', to: 'cyan' }}
           >
             Sign Up Now
-          </Button>
+          </Button></a>
         </Group>
         <Group className={classes.controls}>
         <h1 >Make Your Mark –</h1>
 
-          <Button
+         <a href="/HostingPage">
+         <Button
             size="xl"
             className={classes.control}
             variant="gradient"
@@ -36,6 +37,7 @@ export function Arena() {
           >
             Host an Event
           </Button>
+         </a>
         </Group>
       </Container>
       

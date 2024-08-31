@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import { Burger, Drawer, Group, Button } from '@mantine/core';
 import classes from './HpFormNavbar.module.css';
-
-const HpFormNavbar: React.FC = () => {
+interface NavProps {
+  page:string;
+ setPage: React.Dispatch<React.SetStateAction<string>>
+}
+function HpFormNavbar({page,setPage}:NavProps) {
   const [opened, setOpened] = useState(false);
 
   return (
     <>
       <div className={classes.navbar}>
         <div className={classes.links}>
-          <Button className={classes.Btn} variant="subtle">Details</Button>
-          <Button className={classes.Btn} variant="subtle">Links</Button>
-          <Button className={classes.Btn} variant="subtle">Prizes</Button>
-          <Button className={classes.Btn} variant="subtle">Schedule</Button>
-          <Button className={classes.Btn} variant="subtle">Submit</Button>
+          <Button onClick={()=>setPage('DetailsPage')} className={`${classes.Btn} ${page==='DetailsPage'?classes.active:classes.inactive}`} variant="subtle">Details</Button>
+          <Button onClick={()=>setPage('LinksPage')} className={`${classes.Btn} ${page==='LinksPage'?classes.active:classes.inactive}`} variant="subtle">Links</Button>
+          <Button onClick={()=>setPage('PrizesPage')} className={`${classes.Btn} ${page==='PrizesPage'?classes.active:classes.inactive}`} variant="subtle">Prizes</Button>
+          <Button onClick={()=>setPage('SchedulePage')} className={`${classes.Btn} ${page==='SchedulePage'?classes.active:classes.inactive}`} variant="subtle">Schedule</Button>
+          <Button onClick={()=>setPage('SubmitPage')} className={`${classes.Btn} ${page==='SubmitPage'?classes.active:classes.inactive}`} variant="subtle">Submit</Button>
         </div>
         <Burger opened={opened} onClick={() => setOpened((o) => !o)} className={classes.burger} />
       </div>
@@ -24,11 +27,11 @@ const HpFormNavbar: React.FC = () => {
         padding="md"
         size="sm"
       >
-        <Button variant="subtle" fullWidth>Details</Button>
-        <Button variant="subtle" fullWidth>Links</Button>
-        <Button variant="subtle" fullWidth>Prizes</Button>
-        <Button variant="subtle" fullWidth>Schedule</Button>
-        <Button variant="subtle" fullWidth>Submit</Button>
+        <Button onClick={()=>setPage('DetailsPage')} variant="subtle" fullWidth>Details</Button>
+        <Button onClick={()=>setPage('LinksPage')} variant="subtle" fullWidth>Links</Button>
+        <Button onClick={()=>setPage('PrizesPage')} variant="subtle" fullWidth>Prizes</Button>
+        <Button onClick={()=>setPage('SchedulePage')} variant="subtle" fullWidth>Schedule</Button>
+        <Button onClick={()=>setPage('SubmitPage')} variant="subtle" fullWidth>Submit</Button>
       </Drawer>
     </>
   );

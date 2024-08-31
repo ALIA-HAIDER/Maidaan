@@ -17,7 +17,7 @@ function HpDetailsPageLinks({page,setPage}:NavProps) {
   };
 
   return (
-    <Container className={styles.formContainer}>
+    <Container  mt={30} className={styles.formContainer}>
       <Grid>
         <Grid.Col span={8}>
           <Grid>
@@ -47,11 +47,12 @@ function HpDetailsPageLinks({page,setPage}:NavProps) {
             <Image src={preview} alt="Uploaded Image" mt="md" radius="md" withPlaceholder />
           )}
         </Grid.Col>
-        <Group  >
-        <Button>Back to Home page</Button>
+       
+      </Grid>
+      <Group  mt={50}>
+        <Button onClick={()=>setPage('DetailsPage')}>Prev</Button>
         <Button onClick={()=>setPage('PrizesPage')}>Next</Button>
         </Group> 
-      </Grid>
     </Container>
   );
 };

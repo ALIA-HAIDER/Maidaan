@@ -27,11 +27,11 @@ function HpDetailsPage({page,setPage}:NavProps) {
         <Grid.Col span={12}>
           <Textarea label="Tournament Details" placeholder="Provide details of the tournament" required />
         </Grid.Col>
-      <Group  >
-        <Button>Back to Home page</Button>
-        <Button onClick={()=>setPage('LinksPage')}>Next</Button>
-        </Group>    
        </Grid>
+       <Group mt={50}  >
+        <Button onClick={()=>setPage('')}>Prev</Button>
+        <Button onClick={()=>setPage('LinksPage')}>Next</Button>
+        </Group>  
     </Container>
   );
 };

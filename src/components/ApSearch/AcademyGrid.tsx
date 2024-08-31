@@ -97,6 +97,7 @@ export function AcademyGrid() {
         onChange={handleSportChange}
         data={[{ value: '', label: 'All Sports' }, ...sportOptions]}
         mb="md"
+        style={{  width: '300px' }}
       />
       <Grid>
         {filteredAcademies.length > 0 ? (

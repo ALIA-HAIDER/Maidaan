@@ -6,6 +6,7 @@ import SignUpPage from './pages/SignUpPage';
 import GovtSchemes from './pages/GovtSchemes';
 import HostingPage from './pages/HostingPage';
 import Academi from './pages/Academies';
+import EventPage from './pages/EventPage';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: '/HostingPage',
     element: <HostingPage/>,
+  },
+  {
+    path: '/EventPage',
+    element: <EventPage/>
   }
 ]);
 

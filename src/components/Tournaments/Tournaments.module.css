@@ -1,5 +1,9 @@
 .container {
     padding-top: 20px;
+    padding-inline: rem(100px);
+     @media (max-width: em(750px)) {
+    padding-inline: rem(20px);
+  }
   }
   
   .heading {

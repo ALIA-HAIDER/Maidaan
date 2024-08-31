@@ -1,7 +1,10 @@
 import { Title, Text, Button, Container } from '@mantine/core';
 import classes from './HpBanner.module.css';
-
-export function HpBanner() {
+interface NavProps {
+  page:string;
+ setPage: React.Dispatch<React.SetStateAction<string>>
+}
+export function HpBanner({page,setPage}:NavProps) {
   return (
     <Container className={classes.wrapper} size={1400}>
       <div className={classes.inner}>
@@ -17,7 +20,7 @@ export function HpBanner() {
         </Container>
 
         <div className={classes.controls}>
-          <Button className={classes.control} size="lg" color='#058A4A'>
+          <Button className={classes.control} size="lg" color='#058A4A' onClick={()=>setPage('DetailsPage')}>
           Oraganize Your Tournament
           </Button>
         </div>

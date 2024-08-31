@@ -38,7 +38,7 @@ function HpSchdulePage({page,setPage}:NavProps) {
   };
 
   return (
-    <Container className={styles.formContainer}>
+    <Container mt={30} className={styles.formContainer}>
       {schedules.map((schedule, index) => (
         <div key={index} className={styles.scheduleContainer}>
           <Grid>
@@ -116,8 +116,8 @@ function HpSchdulePage({page,setPage}:NavProps) {
       >
         Add Schedule
       </Button>
-      <Group  >
-        <Button>Back to Home page</Button>
+      <Group mt={50} >
+        <Button onClick={()=>setPage('PrizesPage')}>Prev</Button>
         <Button onClick={()=>setPage('SubmitPage')}>Next</Button>
         </Group> 
     </Container>

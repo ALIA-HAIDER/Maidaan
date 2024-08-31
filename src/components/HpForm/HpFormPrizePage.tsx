@@ -13,7 +13,7 @@ function HpFormPrizePage({page,setPage}:NavProps){
           <TextInput label="Prize Name" placeholder="Enter tournament Name" required />
         </Grid.Col>
         <Grid.Col span={6} >
-          <TextInput label="Amount" placeholder="DD/MM/YYYY" required />
+          <TextInput label="Amount" placeholder="INR 1 Lakh for 1st Position" />
         </Grid.Col>
         <Grid.Col span={7} >
           <TextInput label="Trophy" placeholder="Describe the Trophy" required />
@@ -26,8 +26,8 @@ function HpFormPrizePage({page,setPage}:NavProps){
         <Button variant='outline' color='red'>Delete Prize</Button>
         </Grid.Col>
       </Grid>
-      <Group  >
-        <Button>Back to Home page</Button>
+      <Group mt={50} >
+        <Button onClick={()=>setPage('LinksPage')}>Prev</Button>
         <Button onClick={()=>setPage('SchedulePage')}>Next</Button>
         </Group> 
     </Container>

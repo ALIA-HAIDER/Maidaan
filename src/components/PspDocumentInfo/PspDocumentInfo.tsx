@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import { TextInput, Container, Grid, Button, Group } from '@mantine/core';
 import styles from './PspDocumentInfo.module.css';
 
-interface NavProps {
-  page: string;
-  setPage: React.Dispatch<React.SetStateAction<string>>;
-}
 
-function PspDocumentInfo({ page, setPage }: NavProps) {
+
+function PspDocumentInfo() {
   const [AadharData, setAadharData] = useState([{ Aadhar: '' }]);
 
   const handleInputChange = (index: number, value: string) => {
@@ -44,14 +41,14 @@ function PspDocumentInfo({ page, setPage }: NavProps) {
         </Grid>
         <Group mt="md">
         <Button
-            onClick={() => setPage('DocumentPage')}
+            // onClick={() => setPage('DocumentPage')}
             className={styles.nextButton}
             color="green"
           >
             Jump to Document
           </Button>
           <Button
-            onClick={() => setPage('AadharInfo')}
+            // onClick={() => setPage('AadharInfo')}
             className={styles.nextButton}
             color="green"
           >

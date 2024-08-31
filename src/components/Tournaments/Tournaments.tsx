@@ -11,7 +11,7 @@ import NextUpTcard from './NextUpTcard';
 function Tournaments() {
    
   return (
-    <Container size="lg" px={100} className={classes.container}>
+    <Container size="lg" className={classes.container}>
       <Text className={classes.heading} >Ongoing</Text>
        <a href="/Tournament/Details" style={{textDecoration:'none'}}><Tcard/></a>
 

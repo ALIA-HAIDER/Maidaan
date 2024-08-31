@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Container, Select, Text } from '@mantine/core';
+import { Button, Container, Select, Text,Group } from '@mantine/core';
 import classes from './HpDetailsPage.module.css';
 interface NavProps {
   page:string;
@@ -83,17 +83,17 @@ export function HpDetailsubmit({page,setPage}:NavProps) {
         )}
       </div>
 
-      <Button
-        fullWidth
-        mt="md"
-        className={classes.viewPlayersButton}
-        color="green"
-        variant="outline"
-        radius="md"
-        size="md"
-      >
-        View all the Registered Players
+      <Group mt={50}>
+      <Button onClick={()=>setPage('SchedulePage')}>
+        Prev
       </Button>
+      <Button>
+       <a href="/" style={{textDecoration:'none',color:'white'}}>Back to Home</a>
+      </Button>
+      <Button >
+       Your Profile
+      </Button>
+      </Group>
     </Container>
   );
 }

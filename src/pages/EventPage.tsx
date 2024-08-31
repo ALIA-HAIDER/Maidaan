@@ -9,6 +9,7 @@ const EventPage: React.FC = () => {
   return (
     
     <>
+    <></>
     <EpHeader/>
     <EpHero/>
     <EventSearch/>

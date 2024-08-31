@@ -7,11 +7,11 @@ const Navbar: React.FC = () => {
     <div className={classes.navbar}>
       <Container size="lg" className={classes.container}>
         <Text className={classes.logo}>Maidaan</Text>
-        <Group spacing="xl" className={classes.links}>
+        <Group  className={classes.links}>
           <Text>Tournaments</Text>
           <Text>Government Schemes</Text>
         </Group>
-        <Group spacing="md" className={classes.buttons}>
+        <Group  className={classes.buttons}>
           <Button variant="outline" color="yellow">Host an Event</Button>
           <Button color="yellow">Sign in</Button>
         </Group>

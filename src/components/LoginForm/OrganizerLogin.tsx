@@ -41,7 +41,7 @@ export function OrganizerLogin({setpage}:OrganizerLoginProps){
           </Button>
         </Group>
 
-          <Group position="apart" mt="md">
+          <Group >
             <Text size="sm" color="dimmed">Don’t have an account</Text>
             <Text size="sm" color="blue" className={classes.signUp} onClick={()=>setpage('Signup')}>Sign Up</Text>
           </Group>

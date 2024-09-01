@@ -1,6 +1,6 @@
-import { Card, Group, Button, Text,Badge,SimpleGrid, Divider} from '@mantine/core';
+import { Card,Stack, Group, Button, Text,Badge,SimpleGrid, Divider} from '@mantine/core';
 import classes from './Tournaments.module.css'
-
+import { Instagram,Link21 } from 'iconsax-react';
 function NextUpTcard(){
     const tournaments= [
         {
@@ -20,12 +20,20 @@ function NextUpTcard(){
       const card =tournaments.map((tournaments) => (
     <Card shadow="sm" p="lg">
       <Card className={classes.card}>
-              <Text className={classes.title}>{tournaments.title}</Text>
-              <Text className={classes.sport}>{tournaments.sport}</Text>
-              <div className={classes.location}>
-                {/* <IconLocation size={18} className={classes.icon} /> */}
+      <Group style={{display:'flex',justifyContent:'space-between'}}>
+            <Stack>
+            <Text className={classes.title}>{tournaments.title}</Text>
+            <Text className={classes.sport}>{tournaments.sport}</Text>
+            </Stack>
+               <Stack>
+               <Group>             
+                 <Link21 size="20" color="#000000"/> <Instagram size="20" color="#000000"/>
+               </Group>
+            <div className={classes.location}>
                 <Text>{tournaments.location}</Text>
               </div>
+               </Stack>
+             </Group>
               <Divider my="md" color='#DDDDDD' size="sm"></Divider>
               <Badge className={classes.badge}>{tournaments.status}</Badge>
               <Text className={classes.fee}>{tournaments.fee}</Text>

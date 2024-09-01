@@ -1,9 +1,11 @@
-.navbar {
+.HpFormNavbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* padding: 1rem; */
     background-color: #06A3571A;
+    width: 100%;
+    z-index: 1000;
   }
   .active{
     background-color: white;

@@ -77,7 +77,7 @@ export function HeaderMegaMenu({NavLinks,SetNavLinks}:NavProps) {
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
-
+          <a href="/" className={classes.link}>Home</a>
           <a onClick={()=>SetNavLinks('Tournaments')} className={classes.link}>
             Tournaments
             </a>

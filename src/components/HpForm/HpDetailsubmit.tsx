@@ -77,20 +77,27 @@ export function HpDetailsubmit({page,setPage}:NavProps) {
         </Button>
 
         {submitted && (
-          <Text size="sm" color="green" mt="xs" className={classes.submittedText}>
+          <Text size="sm"  mt="xs" className={classes.submittedText}>
             Submitted
           </Text>
         )}
       </div>
 
       <Group mt={50}>
-      <Button onClick={()=>setPage('SchedulePage')}>
+      <Button onClick={()=>setPage('SchedulePage')}    styles={(theme) => ({
+            root: {
+              backgroundColor: '#058A4A',
+              '&:hover': {
+                backgroundColor: '#046C3A',
+              },
+            },
+          })}>
         Prev
       </Button>
-      <Button>
-       <a href="/" style={{textDecoration:'none',color:'white'}}>Back to Home</a>
+      <Button color="#058A4A">
+       <a href="/" style={{textDecoration:'none',color:'white' ,backgroundColor:'#058A4A'}} >Back to Home</a>
       </Button>
-      <Button >
+      <Button color="#058A4A">
        Your Profile
       </Button>
       </Group>

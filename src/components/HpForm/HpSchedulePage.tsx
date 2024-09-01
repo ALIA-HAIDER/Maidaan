@@ -93,14 +93,8 @@ function HpSchdulePage({page,setPage}:NavProps) {
             </Grid.Col>
 
             <Grid.Col span={6}>
-              <Button
-                className={styles.deleteButton}
-                color="#E54335"
-                // fullWidth
-                onClick={() => handleDeleteSchedule(index)}
-              >
-                Delete Schedule
-              </Button>
+        <Button variant='outline' color='red' onClick={() => handleDeleteSchedule(index)}>Delete Prize</Button>
+
             </Grid.Col>
             
           </Grid>
@@ -117,8 +111,8 @@ function HpSchdulePage({page,setPage}:NavProps) {
         Add Schedule
       </Button>
       <Group mt={50} >
-        <Button onClick={()=>setPage('PrizesPage')}>Prev</Button>
-        <Button onClick={()=>setPage('SubmitPage')}>Next</Button>
+        <Button onClick={()=>setPage('PrizesPage')} color="#058A4A">Prev</Button>
+        <Button onClick={()=>setPage('SubmitPage')} color="#058A4A">Next</Button>
         </Group> 
     </Container>
   );

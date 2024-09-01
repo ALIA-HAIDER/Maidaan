@@ -12,11 +12,11 @@ function HpFormNavbar({page,setPage}:NavProps) {
     <>
       <div className={classes.navbar}>
         <div className={classes.links}>
-          <Button onClick={()=>setPage('DetailsPage')} className={`${classes.Btn} ${page==='DetailsPage'?classes.active:classes.inactive}`} variant="subtle">Details</Button>
-          <Button onClick={()=>setPage('LinksPage')} className={`${classes.Btn} ${page==='LinksPage'?classes.active:classes.inactive}`} variant="subtle">Links</Button>
-          <Button onClick={()=>setPage('PrizesPage')} className={`${classes.Btn} ${page==='PrizesPage'?classes.active:classes.inactive}`} variant="subtle">Prizes</Button>
-          <Button onClick={()=>setPage('SchedulePage')} className={`${classes.Btn} ${page==='SchedulePage'?classes.active:classes.inactive}`} variant="subtle">Schedule</Button>
-          <Button onClick={()=>setPage('SubmitPage')} className={`${classes.Btn} ${page==='SubmitPage'?classes.active:classes.inactive}`} variant="subtle">Submit</Button>
+          <Button onClick={()=>setPage('DetailsPage')} className={`${classes.Btn} ${page==='DetailsPage'?classes.active:classes.inactive}`} variant="subtle" color= '#058A4A'>Details</Button>
+          <Button onClick={()=>setPage('LinksPage')} className={`${classes.Btn} ${page==='LinksPage'?classes.active:classes.inactive}`} variant="subtle" color= '#058A4A'>Links</Button>
+          <Button onClick={()=>setPage('PrizesPage')} className={`${classes.Btn} ${page==='PrizesPage'?classes.active:classes.inactive}`} variant="subtle"color= '#058A4A'>Prizes</Button>
+          <Button onClick={()=>setPage('SchedulePage')} className={`${classes.Btn} ${page==='SchedulePage'?classes.active:classes.inactive}`} variant="subtle"color= '#058A4A'>Schedule</Button>
+          <Button onClick={()=>setPage('SubmitPage')} className={`${classes.Btn} ${page==='SubmitPage'?classes.active:classes.inactive}`} variant="subtle"color= '#058A4A'>Submit</Button>
         </div>
         <Burger opened={opened} onClick={() => setOpened((o) => !o)} className={classes.burger} />
       </div>

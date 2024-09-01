@@ -50,8 +50,8 @@ function HpDetailsPageLinks({page,setPage}:NavProps) {
        
       </Grid>
       <Group  mt={50}>
-        <Button onClick={()=>setPage('DetailsPage')}>Prev</Button>
-        <Button onClick={()=>setPage('PrizesPage')}>Next</Button>
+        <Button onClick={()=>setPage('DetailsPage')} color="#058A4A">Prev</Button>
+        <Button onClick={()=>setPage('PrizesPage')} color="#058A4A">Next</Button>
         </Group> 
     </Container>
   );

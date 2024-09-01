@@ -1,5 +1,5 @@
 import {
-    Group,Button,Divider,Box,Burger,Drawer,ScrollArea,rem,useMantineTheme,} from '@mantine/core';
+    Group,Button,Box,Burger,Drawer,ScrollArea,rem,useMantineTheme,} from '@mantine/core';
   import { MantineLogo } from '@mantinex/mantine-logo';
   import { useDisclosure } from '@mantine/hooks';
   import classes from './HpNav.module.css';

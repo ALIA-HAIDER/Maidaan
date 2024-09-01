@@ -10,7 +10,7 @@ function HpFormNavbar({page,setPage}:NavProps) {
 
   return (
     <>
-      <div className={classes.navbar}>
+      <div className={classes.HpFormNavbar}>
         <div className={classes.links}>
           <Button onClick={()=>setPage('DetailsPage')} className={`${classes.Btn} ${page==='DetailsPage'?classes.active:classes.inactive}`} variant="subtle" color= '#058A4A'>Details</Button>
           <Button onClick={()=>setPage('LinksPage')} className={`${classes.Btn} ${page==='LinksPage'?classes.active:classes.inactive}`} variant="subtle" color= '#058A4A'>Links</Button>

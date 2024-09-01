@@ -9,6 +9,7 @@ import Tournaments from './components/Tournaments/Tournaments';
 import GovtSchemes from './pages/GovtSchemes';
 import Academies from './pages/Academies';
 import PageProvider from './Context';
+import EventPage from './pages/EventPage';
 export default function App() {
   // type NL = 'Tournaments' | 'Events' | 'Academies' | 'GovtSheme'| 'Home';
   const [NavLinks,SetNavLinks]=useState<string>('')
@@ -17,7 +18,7 @@ export default function App() {
     <MantineProvider theme={theme}>
     <PageProvider>
     <HeaderMegaMenu SetNavLinks={SetNavLinks} NavLinks={NavLinks} />
-     {NavLinks==='Tournaments'?<Tournaments/>:NavLinks==='GovernmentSchemes'?<GovtSchemes/>:NavLinks==='Academies'?<Academies/>:<Router/>
+     {NavLinks==='Tournaments'?<Tournaments/>:NavLinks==='Events'?<EventPage/>:NavLinks==='GovernmentSchemes'?<GovtSchemes/>:NavLinks==='Academies'?<Academies/>:<Router />
 }
       <FooterLinks/>
     </PageProvider>

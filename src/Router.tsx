@@ -36,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: '/ProfilePage',
     element: <ProfilePage/>
+  },
+  {
+    path: '/Tournament',
+    element: <TournamentPage/>
   }
 ]);
 

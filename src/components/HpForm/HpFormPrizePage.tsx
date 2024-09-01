@@ -27,8 +27,8 @@ function HpFormPrizePage({page,setPage}:NavProps){
         </Grid.Col>
       </Grid>
       <Group mt={50} >
-        <Button onClick={()=>setPage('LinksPage')}>Prev</Button>
-        <Button onClick={()=>setPage('SchedulePage')}>Next</Button>
+        <Button onClick={()=>setPage('LinksPage')} color="#058A4A">Prev</Button>
+        <Button onClick={()=>setPage('SchedulePage')} color="#058A4A" >Next</Button>
         </Group> 
     </Container>
   );

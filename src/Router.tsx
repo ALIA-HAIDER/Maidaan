@@ -7,6 +7,8 @@ import GovtSchemes from './pages/GovtSchemes';
 import HostingPage from './pages/HostingPage';
 import Academi from './pages/Academies';
 import EventPage from './pages/EventPage';
+import { PpProfileBox } from './components/PpProfileBox/PpProfileBox';
+import ProfilePage from './pages/ProfilePage';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: '/EventPage',
     element: <EventPage/>
+  },
+  {
+    path: '/ProfilePage',
+    element: <ProfilePage/>
   }
 ]);
 

@@ -32,6 +32,9 @@ export function HeaderMegaMenu({NavLinks,SetNavLinks}:NavProps) {
 
         
           <Group h="100%" gap={0} visibleFrom="sm">
+          <a  href="/" className={`${classes.link} `} >
+            <p >Home</p>
+            </a>
             <a  onClick={()=>SetNavLinks('Tournaments')} className={`${classes.link} `} >
             <p className={` ${NavLinks==='Tournaments'?classes.active:classes.inactive}`}>Tournaments</p>
             </a>
@@ -44,6 +47,7 @@ export function HeaderMegaMenu({NavLinks,SetNavLinks}:NavProps) {
             <a onClick={()=>SetNavLinks('GovernmentSchemes')} className={classes.link}>
             <p className={` ${NavLinks==='GovernmentSchemes'?classes.active:classes.inactive}`}>Government Schemes</p>
             </a> 
+            <a href="/ProfilePage">pro</a>
           </Group>
          
 
@@ -86,6 +90,7 @@ export function HeaderMegaMenu({NavLinks,SetNavLinks}:NavProps) {
             <a onClick={()=>SetNavLinks('GovernmentSchemes')} className={classes.link}>
             Government Schemes
             </a> 
+            
 
           <Divider my="sm" />
 
